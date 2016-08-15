@@ -15,7 +15,7 @@ export class AppComponent {
         private router: Router) {
 
         router.events
-            .subscribe((event:Event) => {
+            .subscribe((event) => {
                 if (event instanceof NavigationStart) {
                     let url = event.url;
                     if (event.url && event.url.substring(0,1) === "/") {
