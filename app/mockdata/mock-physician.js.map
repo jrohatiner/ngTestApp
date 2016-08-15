@@ -1,0 +1,1 @@
+{"version":3,"file":"mock-physician.js","sourceRoot":"","sources":["mock-physician.ts"],"names":[],"mappings":"AAAA,uCAAuC;;AAE1B,iBAAS,GAClB;IACI,WAAW,EAAE,MAAM;IACnB,UAAU,EAAE,KAAK;IACjB,UAAU,EAAE,sBAAsB;IAClC,cAAc,EAAE,cAAc;IAC9B,MAAM,EAAE,YAAY;IACpB,OAAO,EAAE,IAAI;IACb,KAAK,EAAE,OAAO;IACd,OAAO,EAAE,gBAAgB;IACzB,OAAO,EAAE,eAAe;CAC3B,CAAC"}
