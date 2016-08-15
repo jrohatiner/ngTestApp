@@ -15,6 +15,7 @@ var PatientDetailComponent = (function () {
     function PatientDetailComponent(patientService, route) {
         this.patientService = patientService;
         this.route = route;
+        this.isEditMode = false;
     }
     PatientDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -36,10 +37,17 @@ var PatientDetailComponent = (function () {
             _this.patientService.getPatientLabResults(id)
                 .then(function (labResults) { return _this.labResults = labResults; });
         });
-        // TODO Get other data
-        // TODO get data in parallel
         // TODO edit view
         // TODO observables
+        // TODO more components
+        // TODO clean list component
+        // TODO files
+    };
+    PatientDetailComponent.prototype.editPatient = function () {
+        this.isEditMode = true;
+    };
+    PatientDetailComponent.prototype.savePatient = function () {
+        this.isEditMode = false;
     };
     PatientDetailComponent = __decorate([
         core_1.Component({

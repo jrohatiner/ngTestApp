@@ -3,15 +3,25 @@
         <div id="listRepeater" class="element element-2">
         </div>
         <img class="image image-2" alt="patientIconLarge" src="{{patient.imageUrl}}">
-        <button class="_button">EDIT</button>
-        <div id="patientContact" class="text text-2">
+        <button *ngIf="!isEditMode" (click)="editPatient()" class="_button">EDIT</button>
+        <button *ngIf="isEditMode" (click)="savePatient()" class="_button">SAVE</button>
+
+        <div *ngIf="!isEditMode" id="patientContact" class="text text-2">
             <p>{{patient.phone}}</p>
             <p>{{patient.email}}<br></p>
         </div>
+        <div *ngIf="isEditMode" id="patientContact" class="text text-2">
+            <input [(ngModel)]="patient.phone">
+            <input [(ngModel)]="patient.email">
+        </div>
         <p id="contactTitle" class="textheader textheader-1">Patient Contact Information</p>
-        <div id="patientAddress" class="text text-3">
+        <div *ngIf="!isEditMode" id="patientAddress" class="text text-3">
             <p>{{patient.addressLine1}}</p>
             <p>{{patient.city}}, {{patient.state}} {{patient.zip}}</p>
+        </div>
+        <div *ngIf="isEditMode" id="patientAddress" class="text text-3">
+            <input [(ngModel)]="patient.addressLine1">
+            <input [(ngModel)]="patient.city" style="width:150px">, <input style="width:50px" [(ngModel)]="patient.state"> <input style="width:75px" [(ngModel)]="patient.zip">
         </div>
         <p id="addressTitle" class="textheader textheader-2">Patient Address</p>
         <p id="listRepeaterTitle" class="textheader textheader-3">Patient Information</p>
@@ -20,6 +30,14 @@
         <div id="patientName" class="text text-4">
             <p>{{patient.lastName}},</p>
             <p>{{patient.firstName}}</p>
+        </div>
+        <div *ngIf="!isEditMode" id="patientName" class="text text-4">
+            <p>{{patient.lastName}},</p>
+            <p>{{patient.firstName}}</p>
+        </div>
+        <div *ngIf="isEditMode" id="patientName" class="text text-4">
+            <input [(ngModel)]="patient.lastName">
+            <input [(ngModel)]="patient.firstName" >
         </div>
     </div>
 
@@ -118,10 +136,6 @@
                 </tr>
             </table>
         </div>
-        <!--<p id="contactTitle" class="textheader textheader-17">Level</p>-->
-        <!--<div class="element element-15"></div>-->
-        <!--<p id="contactTitle" class="textheader textheader-18">Results</p>-->
-        <!--<p id="addressTitle" class="textheader textheader-19">Tests</p>-->
     </div>
 
 </div>

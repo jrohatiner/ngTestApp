@@ -15,6 +15,7 @@ export class PatientDetailComponent implements OnInit {
     public visits;
     public invoices;
     public labResults;
+    public isEditMode = false;
 
     constructor(
         private patientService: PatientService,
@@ -41,9 +42,18 @@ export class PatientDetailComponent implements OnInit {
                 .then(labResults => this.labResults = labResults);
         });
 
-        // TODO Get other data
-        // TODO get data in parallel
         // TODO edit view
         // TODO observables
+        // TODO more components
+        // TODO clean list component
+        // TODO files
+    }
+
+    editPatient() {
+        this.isEditMode = true;
+    }
+
+    savePatient() {
+        this.isEditMode = false;
     }
 }

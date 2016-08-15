@@ -38,6 +38,21 @@
 .text-7 p {
     margin-bottom: 1em;
 }
+.text-2 input,
+.text-3 input {
+    margin-bottom: calc(1em - 1px);
+    margin-top: -2px;
+    margin-left: -1px;
+    border: 1px solid rgb(222,222,222);
+    width: 308px;
+}
+.text-4 input {
+    margin-bottom: calc(1em - 9px);
+    margin-top: -9px;
+    margin-left: -1px;
+    border: 1px solid rgb(222,222,222);
+    width: 308px;
+}
 
 .textheader {
     font-size: 1em;
@@ -479,21 +494,21 @@
 }
 
 .textheader-2 {
-    /*position: absolute;*/
-    /*top: 164px;*/
-    /*left: 254px;*/
-    /*z-index: 45;*/
+    position: absolute;
+    top: 164px;
+    left: 254px;
+    z-index: 45;
     color: rgb(98, 98, 98);
-    float: left;
-    margin: 4px 0 0 10px;
 }
 
 .textheader-20 {
-    position: absolute;
-    top: 4px;
-    left: 10px;
-    z-index: 3;
+    /*position: absolute;*/
+    /*top: 4px;*/
+    /*left: 10px;*/
+    /*z-index: 3;*/
     color: rgb(255, 255, 255);
+    float: left;
+    margin: 4px 0 0 10px;
 }
 
 .textheader-3 {
