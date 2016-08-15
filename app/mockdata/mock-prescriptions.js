@@ -1,4 +1,3 @@
-//import { Patient } from '../patient';
 "use strict";
 exports.PRESCRIPTIONS = [
     {

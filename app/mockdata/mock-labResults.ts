@@ -1,5 +1,3 @@
-//import { Patient } from '../patient';
-
 export const LAB_RESULTS =
     [
         {

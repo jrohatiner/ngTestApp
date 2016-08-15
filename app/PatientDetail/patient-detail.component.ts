@@ -1,6 +1,5 @@
 import { Component, OnInit }        from '@angular/core';
 import { ActivatedRoute, Params }    from '@angular/router';
-import { Patient }                  from '../patient';
 import { PatientService }           from '../patient.service';
 
 @Component({
@@ -9,13 +8,13 @@ import { PatientService }           from '../patient.service';
     styleUrls: ['app/PatientDetail/patient-detail.component.css']
 })
 export class PatientDetailComponent implements OnInit {
-    public patient: Patient;
-    public physician;
-    public prescriptions;
-    public visits;
-    public invoices;
-    public labResults;
-    public isEditMode = false;
+    patient;
+    physician;
+    prescriptions = [];
+    visits = [];
+    invoices = [];
+    labResults = [];
+    isEditMode = false;
 
     constructor(
         private patientService: PatientService,
@@ -41,11 +40,6 @@ export class PatientDetailComponent implements OnInit {
             this.patientService.getPatientLabResults(id)
                 .then(labResults => this.labResults = labResults);
         });
-
-        // TODO observables
-        // TODO more components
-        // TODO clean list component
-        // TODO files
     }
 
     editPatient() {

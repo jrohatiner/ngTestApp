@@ -9,8 +9,7 @@ import { PatientService }       from '../patient.service';
 
 })
 export class PatientsComponent implements OnInit {
-    patients: Patient[];
-    selectedPatient: Patient;
+    patients;
 
     constructor(
         private router: Router,
@@ -21,10 +20,6 @@ export class PatientsComponent implements OnInit {
         this.getPatients();
     }
 
-    onSelect(patient: Patient) {
-        this.selectedPatient = patient;
-    }
-
     getPatients() {
         this.patientService.getPatients()
             .then(
@@ -32,7 +27,7 @@ export class PatientsComponent implements OnInit {
             );
     }
 
-    gotoPatientDetail(patient: Patient) {
+    gotoPatientDetail(patient) {
         let link = ['/patient', 1];  // the '1' would be hte patient Id, but hte patient list data does not have id's
         this.router.navigate(link);
     }

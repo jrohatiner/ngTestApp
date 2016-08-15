@@ -19,9 +19,6 @@ var PatientsComponent = (function () {
     PatientsComponent.prototype.ngOnInit = function () {
         this.getPatients();
     };
-    PatientsComponent.prototype.onSelect = function (patient) {
-        this.selectedPatient = patient;
-    };
     PatientsComponent.prototype.getPatients = function () {
         var _this = this;
         this.patientService.getPatients()

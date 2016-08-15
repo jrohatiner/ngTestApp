@@ -15,6 +15,10 @@ var PatientDetailComponent = (function () {
     function PatientDetailComponent(patientService, route) {
         this.patientService = patientService;
         this.route = route;
+        this.prescriptions = [];
+        this.visits = [];
+        this.invoices = [];
+        this.labResults = [];
         this.isEditMode = false;
     }
     PatientDetailComponent.prototype.ngOnInit = function () {
@@ -37,10 +41,6 @@ var PatientDetailComponent = (function () {
             _this.patientService.getPatientLabResults(id)
                 .then(function (labResults) { return _this.labResults = labResults; });
         });
-        // TODO observables
-        // TODO more components
-        // TODO clean list component
-        // TODO files
     };
     PatientDetailComponent.prototype.editPatient = function () {
         this.isEditMode = true;
