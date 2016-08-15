@@ -37,7 +37,6 @@ var PatientDetailComponent = (function () {
             _this.patientService.getPatientLabResults(id)
                 .then(function (labResults) { return _this.labResults = labResults; });
         });
-        // TODO edit view
         // TODO observables
         // TODO more components
         // TODO clean list component

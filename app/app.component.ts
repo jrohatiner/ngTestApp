@@ -1,4 +1,5 @@
 import { Component }        from '@angular/core';
+import { ActivatedRoute, Router, NavigationStart }    from '@angular/router';
 
 @Component({
     selector: 'lcp-app',
@@ -6,7 +7,9 @@ import { Component }        from '@angular/core';
         <div id="appContainer" class="container clearfix">
             <div id="appContainer" class="container heading-container">
                 <div id="header" class="element element-1">
-                    <img class="image image-1" src="images/left-arrow.svg" (click)="goBack()">
+                    <button type="button" [disabled]="!canGoBack" (click)="goBack()">
+                        <img class="image image-1" [class.active]="canGoBack" src="images/left-arrow.svg">
+                    </button>
                     <p id="headerTitle" class="text text-1">{{title}}</p>
                 </div>
             </div>
@@ -72,6 +75,9 @@ import { Component }        from '@angular/core';
           max-width: 38px;
           opacity: 0.2;
         }
+        .image-1.active {
+            opacity: 1.0;
+        }
         
         .text-1 {
           top: 95px;
@@ -84,10 +90,28 @@ import { Component }        from '@angular/core';
         }
     `]})
 export class AppComponent {
+    public canGoBack = false;
     title = 'Patient List';
 
-    constructor() {
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router) {
 
+        router.events
+            .subscribe((event:Event) => {
+                if (event instanceof NavigationStart) {
+                    let url = event.url;
+                    if (event.url && event.url.substring(0,1) === "/") {
+                        url = url.substring(1);
+                    }
+                    if (url === "" || url === "patients") {
+                        this.canGoBack = false;
+                    } else {
+                        this.canGoBack = true;
+                    }
+                }
+
+            });
     }
 
     goBack() {

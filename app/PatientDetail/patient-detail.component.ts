@@ -42,7 +42,6 @@ export class PatientDetailComponent implements OnInit {
                 .then(labResults => this.labResults = labResults);
         });
 
-        // TODO edit view
         // TODO observables
         // TODO more components
         // TODO clean list component

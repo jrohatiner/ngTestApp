@@ -1,13 +1,12 @@
 "use strict";
 var router_1 = require('@angular/router');
-var login_component_1 = require('./login.component');
-var patients_component_1 = require('./patients.component');
+var patients_component_1 = require('./PatientList/patients.component');
 var patient_detail_component_1 = require('./PatientDetail/patient-detail.component');
-//import { PageNotFoundComponent }    from './page-not-found.component';
 var appRoutes = [
     {
-        path: 'login',
-        component: login_component_1.LoginComponent
+        path: '',
+        redirectTo: '/patients',
+        pathMatch: 'full'
     },
     {
         path: 'patients',

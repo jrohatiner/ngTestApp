@@ -13,10 +13,9 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing'); //, appRoutingProviders
-var patients_component_1 = require('./patients.component');
+var patients_component_1 = require('./PatientList/patients.component');
 var patient_detail_component_1 = require('./PatientDetail/patient-detail.component');
 var patient_service_1 = require('./patient.service');
-//import { LoginComponent }               from './login.component';
 var AppModule = (function () {
     function AppModule() {
     }
