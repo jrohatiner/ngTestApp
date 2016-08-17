@@ -1,65 +1,75 @@
 <div *ngIf="patient">
     <div id="infoExpanded" class="containerrepeater containerrepeater-1 clearfix">
         <div id="listRepeater" class="element element-2">
-        </div>
-        <img class="image image-2" alt="patientIconLarge" src="{{patient.imageUrl}}">
-        <button *ngIf="!isEditMode" (click)="editPatient()" class="_button">EDIT</button>
-        <button *ngIf="isEditMode" (click)="savePatient()" class="_button">SAVE</button>
+            <div id="listRepeaterHeader" class="element element-3">
+                <p id="listRepeaterTitle" class="textheader textheader-3">Patient Information</p>
+            </div>
+            <div class="element element-4">
+                <img class="image image-2" alt="patientIconLarge" src="{{patient.imageUrl}}">
+                <!--<div id="patientName" class="text text-4">-->
+                    <!--<p>{{patient.lastName}},</p>-->
+                    <!--<p>{{patient.firstName}}</p>-->
+                <!--</div>-->
+                <div class="detail-text">
+                    <div *ngIf="!isEditMode" id="patientName" class="text text-4">
+                        <p>{{patient.lastName}},</p>
+                        <p>{{patient.firstName}}</p>
+                    </div>
+                    <div *ngIf="isEditMode" id="patientName" class="text text-4">
+                        <input class="input--block" [(ngModel)]="patient.lastName">
+                        <input [(ngModel)]="patient.firstName" >
+                    </div>
+                    <p id="addressTitle" class="textheader textheader-2">Patient Address</p>
+                    <div *ngIf="!isEditMode" id="patientAddress" class="text text-3">
+                        <p>{{patient.addressLine1}}</p>
+                        <p>{{patient.city}}, {{patient.state}} {{patient.zip}}</p>
+                    </div>
+                    <div *ngIf="isEditMode" id="patientAddress" class="text text-3">
+                        <input class="input--block" [(ngModel)]="patient.addressLine1">
+                        <input [(ngModel)]="patient.city" style="width:150px">, <input style="width:50px" [(ngModel)]="patient.state"> <input style="width:75px" [(ngModel)]="patient.zip">
+                    </div>
 
-        <div *ngIf="!isEditMode" id="patientContact" class="text text-2">
-            <p>{{patient.phone}}</p>
-            <p>{{patient.email}}<br></p>
-        </div>
-        <div *ngIf="isEditMode" id="patientContact" class="text text-2">
-            <input [(ngModel)]="patient.phone">
-            <input [(ngModel)]="patient.email">
-        </div>
-        <p id="contactTitle" class="textheader textheader-1">Patient Contact Information</p>
-        <div *ngIf="!isEditMode" id="patientAddress" class="text text-3">
-            <p>{{patient.addressLine1}}</p>
-            <p>{{patient.city}}, {{patient.state}} {{patient.zip}}</p>
-        </div>
-        <div *ngIf="isEditMode" id="patientAddress" class="text text-3">
-            <input [(ngModel)]="patient.addressLine1">
-            <input [(ngModel)]="patient.city" style="width:150px">, <input style="width:50px" [(ngModel)]="patient.state"> <input style="width:75px" [(ngModel)]="patient.zip">
-        </div>
-        <p id="addressTitle" class="textheader textheader-2">Patient Address</p>
-        <p id="listRepeaterTitle" class="textheader textheader-3">Patient Information</p>
-        <div id="listRepeaterHeader" class="element element-3">
-        </div>
-        <div id="patientName" class="text text-4">
-            <p>{{patient.lastName}},</p>
-            <p>{{patient.firstName}}</p>
-        </div>
-        <div *ngIf="!isEditMode" id="patientName" class="text text-4">
-            <p>{{patient.lastName}},</p>
-            <p>{{patient.firstName}}</p>
-        </div>
-        <div *ngIf="isEditMode" id="patientName" class="text text-4">
-            <input [(ngModel)]="patient.lastName">
-            <input [(ngModel)]="patient.firstName" >
+                    <p id="contactTitle" class="textheader textheader-1">Patient Contact Information</p>
+                    <div *ngIf="!isEditMode" id="patientContact" class="text text-2">
+                        <p>{{patient.phone}}</p>
+                        <p>{{patient.email}}</p>
+                    </div>
+                    <div *ngIf="isEditMode" id="patientContact" class="text text-2">
+                        <input class="input--block" [(ngModel)]="patient.phone">
+                        <input [(ngModel)]="patient.email">
+                    </div>
+                </div>
+                <button *ngIf="!isEditMode" (click)="editPatient()" class="_button">EDIT</button>
+                <button *ngIf="isEditMode" (click)="savePatient()" class="_button button--save">SAVE</button>
+            </div>
         </div>
     </div>
 
     <div id="infoPhysician" class="containerrepeater containerrepeater-2">
-        <img class="image image-3" src="{{physician.imageUrl}}"> <!--images/doctor-01.svg-->
-        <div id="patientContact" class="text text-5">
-            <p>{{physician.phone}}</p>
-            <p>{{physician.email}}<br></p>
+        <div id="listRepeater" class="element element-5">
+            <div id="listRepeaterHeader" class="element element-4-2">
+                <p id="listRepeaterTitle" class="textheader textheader-6">Physician Information</p>
+            </div>
+            <div class="element element-4-3">
+                <img class="image image-3" src="{{physician.imageUrl}}"> <!--images/doctor-01.svg-->
+                <div class="detail-text">
+                    <div id="patientName" class="text text-7">
+                        <p>{{physician.lastName}},</p>
+                        <p>{{physician.firstName}}</p>
+                    </div>
+                    <p id="addressTitle" class="textheader textheader-5">Physician Address</p>
+                    <div id="patientAddress" class="text text-6">
+                        <p>{{physician.addressLine1}}</p>
+                        <p>{{physician.city}}, {{physician.state}} {{physician.zip}}</p>
+                    </div>
+                    <p id="contactTitle" class="textheader textheader-4">Physician Contact Information</p>
+                    <div id="patientContact" class="text text-5">
+                        <p>{{physician.phone}}</p>
+                        <p>{{physician.email}}<br></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p id="contactTitle" class="textheader textheader-4">Physician Contact Information</p>
-        <div id="patientAddress" class="text text-6">
-            <p>{{physician.addressLine1}}</p>
-            <p>{{physician.city}}, {{physician.state}} {{physician.zip}}</p>
-        </div>
-        <p id="addressTitle" class="textheader textheader-5">Physician Address</p>
-        <p id="listRepeaterTitle" class="textheader textheader-6">Physician Information</p>
-        <div id="patientName" class="text text-7">
-            <p>{{physician.lastName}},</p>
-            <p>{{physician.firstName}}</p>
-        </div>
-        <div id="listRepeaterHeader" class="element element-4"></div>
-        <div id="listRepeater" class="element element-5"></div>
     </div>
 
     <div id="infoMedications" class="containerrepeater containerrepeater-3 clearfix">

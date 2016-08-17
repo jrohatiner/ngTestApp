@@ -1,26 +1,27 @@
 .containerrepeater {
-    position: relative;
-    left: 30px;
-    width: 660px;
-    height: 416px;
     font: 400 16px/1.38 Roboto;
     color: rgb(0, 0, 0);
+    margin-top:20px;
+    padding-left: 30px;
 }
 
 .containerrepeater .text {
-    left: 254px;
     color: rgb(0, 0, 0);
+}
+.containerrepeater .image {
+    float: left;
 }
 
 .image {
     display: block;
-    position: absolute;
     height: auto;
     overflow: hidden;
 }
 
-.text {
-    position: absolute;
+.detail-text {
+    padding: 2px 0 0 21px;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .text-2 p,
@@ -31,20 +32,24 @@
 .text-7 p {
     margin-bottom: 1em;
 }
+
+.input--block {
+    display: block;
+}
 .text-2 input,
 .text-3 input {
     margin-bottom: calc(1em - 1px);
     margin-top: -2px;
     margin-left: -1px;
     border: 1px solid rgb(222,222,222);
-    width: 308px;
+    /*width: 308px;*/
 }
 .text-4 input {
     margin-bottom: calc(1em - 9px);
     margin-top: -9px;
     margin-left: -1px;
     border: 1px solid rgb(222,222,222);
-    width: 308px;
+    /*width: 308px;*/
 }
 
 .textheader {
@@ -53,10 +58,8 @@
 
 ._button {
     display: block;
-    position: absolute;
-    top: 376px;
-    left: 497px;
-    z-index: 49;
+    float: right;
+    margin-top: 310px;
     width: 140px;
     height: 30px;
     border-radius: 3px;
@@ -64,6 +67,9 @@
     font-size: 1em;
     text-align: center;
     color: rgb(255, 153, 0);
+}
+.button--save {
+    margin-top: -8px;
 }
 
 ._button:hover {
@@ -76,47 +82,8 @@
     box-shadow: 0 0 10px 1px rgba(255, 153, 0, 0.5) inset;
 }
 
-.containerrepeater-1 {
-    top: 205px;
-    z-index: 51;
-}
-
-.containerrepeater-2 {
-    top: 266px;
-    z-index: 40;
-}
-
-.containerrepeater-3 {
-    top: 297px;
-}
-
-.containerrepeater-4 {
-    top: 333px;
-    z-index: 22;
-}
-
-.containerrepeater-5 {
-    top: 369px;
-    z-index: 15;
-}
-
-.containerrepeater-6 {
-    top: 405px;
-    z-index: 8;
-}
-
-.element-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 52;
-    width: 720px;
-    height: 170px;
-    background-color: rgb(0, 127, 163);
-}
-
 .element-10 {
-    width: 100%;
+    width: 660px;
     height: 28px;
     background-color: rgb(0, 127, 163);
 }
@@ -131,7 +98,7 @@
 }
 
 .element-12 {
-    width: 100%;
+    width: 660px;
     height: 28px;
     background-color: rgb(0, 127, 163);
 }
@@ -166,7 +133,7 @@
 }
 
 .element-16 {
-    width: 100%;
+    width: 660px;
     height: 28px;
     background-color: rgb(0, 127, 163);
 }
@@ -191,11 +158,6 @@
 }
 
 .element-2 {
-    position: absolute;
-    top: 28px;
-    left: 0;
-    float: left;
-    z-index: 41;
     width: 660px;
     height: 416px;
     border: 1px solid rgb(195, 195, 195);
@@ -203,31 +165,20 @@
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-.element-3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 43;
-    width: 660px;
+.element-3,
+.element-4-2 {
     height: 28px;
     background-color: rgb(0, 127, 163);
+    padding: 4px 0 0 10px;
 }
 
-.element-4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 32;
-    width: 660px;
-    height: 28px;
-    background-color: rgb(0, 127, 163);
+.element-4,
+.element-4-3 {
+    width: 100%;
+    padding: 36px 20px 0 9px;
 }
 
 .element-5 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 31;
     width: 660px;
     height: 416px;
     border: 1px solid rgb(195, 195, 195);
@@ -280,16 +231,10 @@
 }
 
 .image-2 {
-    top: 66px;
-    left: 9px;
-    z-index: 50;
     width: 224px;
 }
 
 .image-3 {
-    top: 57px;
-    left: 10px;
-    z-index: 39;
     width: 225px;
 }
 
@@ -301,65 +246,44 @@
     color: rgb(255, 255, 255);
 }
 
+.text-2,
+.text-3,
+.text-5,
+.text-6 {
+    /*min-height: 91px;*/
+    font-size: 1.125em;
+    line-height: 1.33;
+    margin-top: 6px;
+}
+
 .text-2 {
-    top: 306px;
-    z-index: 48;
     width: 46.6666666666%;
-    min-height: 91px;
-    font-size: 1.125em;
-    line-height: 1.33;
 }
-
 .text-3 {
-    top: 192px;
-    z-index: 46;
     width: 46.6666666666%;
-    min-height: 91px;
-    font-size: 1.125em;
-    line-height: 1.33;
 }
 
-.text-4 {
-    top: 66px;
-    z-index: 42;
+.text-4,
+.text-7 {
     font-size: 1.75em;
     font-weight: 700;
     line-height: 0.75;
 }
 
 .text-5 {
-    top: 307px;
-    z-index: 38;
     width: 49.5454545454%;
-    min-height: 91px;
-    font-size: 1.125em;
-    line-height: 1.33;
 }
-
 .text-6 {
-    top: 192px;
-    z-index: 36;
     width: 49.5454545454%;
-    min-height: 91px;
-    font-size: 1.125em;
-    line-height: 1.33;
 }
 
-.text-7 {
-    top: 66px;
-    z-index: 33;
-    font-size: 1.75em;
-    font-weight: 700;
-    line-height: 0.75;
-}
-
-.textheader-1 {
-    position: absolute;
-    top: 278px;
-    left: 254px;
-    z-index: 47;
+.textheader-1,
+.textheader-2,
+.textheader-4,
+.textheader-5 {
     color: rgb(98, 98, 98);
 }
+
 
 .textheader-10 {
     position: absolute;
@@ -445,50 +369,15 @@
     color: rgb(15, 15, 15);
 }
 
-.textheader-2 {
-    position: absolute;
-    top: 164px;
-    left: 254px;
-    z-index: 45;
-    color: rgb(98, 98, 98);
-}
-
 .textheader-20 {
     color: rgb(255, 255, 255);
     float: left;
     margin: 4px 0 0 10px;
 }
 
-.textheader-3 {
-    position: absolute;
-    top: 6px;
-    left: 10px;
-    font-weight: 400;
-    z-index: 44;
-    color: rgb(255, 255, 255);
-}
-
-.textheader-4 {
-    position: absolute;
-    top: 278px;
-    left: 254px;
-    z-index: 37;
-    color: rgb(98, 98, 98);
-}
-
-.textheader-5 {
-    position: absolute;
-    top: 164px;
-    left: 254px;
-    z-index: 35;
-    color: rgb(98, 98, 98);
-}
-
+.textheader-3,
 .textheader-6 {
-    position: absolute;
-    top: 4px;
-    left: 10px;
-    z-index: 34;
+    font-weight: 400;
     color: rgb(255, 255, 255);
 }
 

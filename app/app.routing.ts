@@ -17,7 +17,8 @@ const appRoutes: Routes = [
     },
     {
         path: 'patient/:id',
-        component: PatientDetailComponent
+        component: PatientDetailComponent,
+        title: 'Patient Detail'
     }
 ];
 

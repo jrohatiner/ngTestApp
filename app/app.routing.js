@@ -17,7 +17,8 @@ var appRoutes = [
     },
     {
         path: 'patient/:id',
-        component: patient_detail_component_1.PatientDetailComponent
+        component: patient_detail_component_1.PatientDetailComponent,
+        title: 'Patient Detail'
     }
 ];
 exports.appRoutingProviders = [];
