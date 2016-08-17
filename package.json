@@ -2,7 +2,9 @@
   "name": "ngTestApp",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "webpack-dev-server --inline --progress --port 8080",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "startold": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",
@@ -30,9 +32,24 @@
     "bootstrap": "^3.3.6"
   },
   "devDependencies": {
+    "angular-template-loader": "0.0.2",
+    "angular2-template-loader": "^0.4.0",
     "concurrently": "^2.0.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
     "lite-server": "^2.2.0",
+    "null-loader": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
-    "typings":"^1.0.4"
+    "typings": "^1.0.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.1"
   }
 }

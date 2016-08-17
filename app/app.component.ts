@@ -1,6 +1,10 @@
 import { Component }        from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart }    from '@angular/router';
 
+// TODO: is standardize.css being used for the test.
+import '../styles/standardize.css';
+import '../styles/index.css';
+
 @Component({
     selector: 'lcp-app',
     templateUrl: 'app/app.component.html',

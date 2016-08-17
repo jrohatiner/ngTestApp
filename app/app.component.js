@@ -10,6 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+require('../styles/index.css');
+// TODO: is standardize.css being used for the test.
+require('../styles/standardize.css');
 var AppComponent = (function () {
     function AppComponent(route, router) {
         var _this = this;
