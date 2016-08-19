@@ -7,7 +7,8 @@ import '../../styles/index.css';
 @Component({
     selector: 'lcp-app',
     template: require('./app.component.html'),
-    styles: [require('./app.component.css')]
+    styles: [require('!!raw!less!./app.component.css')] //thne style-loader will change the css and return an object, vs a raw file
+    //so I am overriding it to just plaing text
 })
 export class AppComponent {
     public canGoBack = false;

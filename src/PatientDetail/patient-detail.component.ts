@@ -6,7 +6,7 @@ import { PanelComponent }           from '../layout/panel.component';
 @Component({
     selector: 'patient-detail',
     template: require('./patient-detail.component.html'),
-    styles: [require('./patient-detail.component.css')]
+    styles: [require('!!raw!less!./patient-detail.component.css')]
 })
 export class PatientDetailComponent implements OnInit {
     patient;

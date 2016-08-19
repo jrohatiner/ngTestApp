@@ -1,4 +1,4 @@
-import 'core-js/es6';
+// import 'core-js/es6';  //dont need for chrome, tring to make file smaller
 import 'core-js/es7/reflect';
 require('zone.js/dist/zone');
 
