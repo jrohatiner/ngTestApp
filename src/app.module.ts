@@ -1,6 +1,7 @@
 import { NgModule }                 from '@angular/core';
 import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
+import {LocationStrategy, HashLocationStrategy, PathLocationStrategy} from '@angular/common';
 
 import { AppComponent }             from './app/app.component';
 import { routing }                  from './app/app.routing';
@@ -22,7 +23,9 @@ import { PatientService }           from './services/patient.service';
         PanelComponent
     ],
     providers: [
-        PatientService
+        PatientService,
+        {provide: LocationStrategy, useClass: HashLocationStrategy}, //so I can host it on gh-pages
+
     ],
     bootstrap:    [ AppComponent ]
 })

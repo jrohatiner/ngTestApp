@@ -19,3 +19,12 @@
  for building real applications. The HTML structure is flattened, and the CSS is heavy in absolute positioning and
  z-indexes.  Enough changes were made to overcome these issues.  Otherwise, this is the HTML and CSS provided.
  
+ 
+ 
+ ##1st: [Demo](https://reyramos.github.io/ngTestApp/) #master branch tries to demonstrate as close as possible to a real Production application with the following features.
+ - HTTP request, call JSON service to load data onto DOM
+ - Lazy loading routes, on large application it is necessary to load chunks when needed.
+ - Loading multiple images, each patients is different from each user, and force browser to XHR request.
+ - 2way binding on Patient information.
+ - Make the necessary HTTP request before rending View/Controller
+ 
