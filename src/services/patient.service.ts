@@ -10,37 +10,33 @@ import { LAB_RESULTS }      from '../mockdata/mock-labResults';
 @Injectable()
 export class PatientService {
     getPatients() {
-        // TODO make async with observables
-        return Promise.resolve(PATIENTS);
+        let patients = PATIENTS.map((patient) => {
+            return patient.patient;
+        });
+        return Promise.resolve(patients);
     }
 
     getPatient(id) {
-        // TODO make async with observables
         return Promise.resolve(PATIENT);
     }
 
     getPatientPhysician(id) {
-        // TODO make async with observables
         return Promise.resolve(PHYSICIAN);
     }
 
     getPatientPrescriptions(id) {
-        // TODO make async with observables
         return Promise.resolve(PRESCRIPTIONS);
     }
 
     getPatientVisits(id) {
-        // TODO make async with observables
         return Promise.resolve(VISITS);
     }
 
     getPatientInvoices(id) {
-        // TODO make async with observables
         return Promise.resolve(INVOICES);
     }
 
     getPatientLabResults(id) {
-        // TODO make async with observables
         return Promise.resolve(LAB_RESULTS);
     }
 }

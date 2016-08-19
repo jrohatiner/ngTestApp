@@ -5,10 +5,10 @@
                     <p class="listrepeater-header--title">Patient Information</p>
                 </div>
                 <div class="listrepeater-body">
-                    <img class="listrepeater-image" alt="patientIconSmall" src="{{patient.patient.imageUrl}}">
+                    <img class="listrepeater-image" alt="patientIconSmall" src="{{patient.imageUrl}}">
                     <div class="listrepeater-text text-2">
-                        <p>{{patient.patient.lastName}},</p>
-                        <p>{{patient.patient.firstName}}</p>
+                        <p>{{patient.lastName}},</p>
+                        <p>{{patient.firstName}}</p>
                     </div>
                     <button (click)="gotoPatientDetail(patient)" class="listrepeater-button">DETAILS</button>
                 </div>
