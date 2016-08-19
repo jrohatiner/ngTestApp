@@ -1,20 +1,17 @@
 import { Component, OnInit }    from '@angular/core';
 import { Router }               from '@angular/router';
-import { PatientService }       from '../patient.service';
+import { PatientService }       from '../services/patient.service';
 
 @Component({
     selector: 'patients',
-    templateUrl: 'app/PatientList/patients.component.html',
-    styleUrls: ['app/PatientList/patients.component.css']
+    template: require('./patients.component.html'),
+    styleUrls: ['./patients.component.css']
 
 })
 export class PatientsComponent implements OnInit {
     patients;
 
-    constructor(
-        private router: Router,
-        private patientService: PatientService) {
-    }
+    constructor(private router: Router, private patientService: PatientService) {}
 
     ngOnInit() {
         this.getPatients();
@@ -28,8 +25,7 @@ export class PatientsComponent implements OnInit {
     }
 
     gotoPatientDetail(patient) {
-        let link = ['/patient', 1];  // the '1' would be hte patient Id, but hte patient list data does not have id's
-        this.router.navigate(link);
+        this.router.navigate(['/patient', 1]);
     }
 
 }

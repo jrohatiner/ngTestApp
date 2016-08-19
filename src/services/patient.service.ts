@@ -1,11 +1,11 @@
 import { Injectable }       from '@angular/core';
-import { PATIENTS }         from './mockdata/mock-patients';
-import { PATIENT }          from './mockdata/mock-patient';
-import { PHYSICIAN }        from './mockdata/mock-physician';
-import { PRESCRIPTIONS }    from './mockdata/mock-prescriptions';
-import { VISITS }           from './mockdata/mock-visits';
-import { INVOICES }         from './mockdata/mock-invoices';
-import { LAB_RESULTS }      from './mockdata/mock-labResults';
+import { PATIENTS }         from '../mockdata/mock-patients';
+import { PATIENT }          from '../mockdata/mock-patient';
+import { PHYSICIAN }        from '../mockdata/mock-physician';
+import { PRESCRIPTIONS }    from '../mockdata/mock-prescriptions';
+import { VISITS }           from '../mockdata/mock-visits';
+import { INVOICES }         from '../mockdata/mock-invoices';
+import { LAB_RESULTS }      from '../mockdata/mock-labResults';
 
 @Injectable()
 export class PatientService {

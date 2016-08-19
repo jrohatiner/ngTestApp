@@ -1,6 +1,6 @@
 import { Routes, RouterModule }     from '@angular/router';
-import { PatientsComponent }        from './PatientList/patients.component';
-import { PatientDetailComponent }   from './PatientDetail/patient-detail.component';
+import { PatientsComponent }        from '../PatientList/patients.component';
+import { PatientDetailComponent }   from '../PatientDetail/patient-detail.component';
 
 const appRoutes: Routes = [
     {

@@ -1,0 +1,11 @@
+<div class="container clearfix">
+    <div class="container heading-container">
+        <div class="page-header">
+            <button type="button" [disabled]="!canGoBack" (click)="goBack()">
+                <img class="page-header--navicon" [class.active]="canGoBack" src="../../images/left-arrow.svg">
+            </button>
+            <p id="headerTitle" class="page-header--text">{{title}}</p>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
