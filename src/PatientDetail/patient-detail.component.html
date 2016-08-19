@@ -1,148 +1,117 @@
 <div *ngIf="patient">
-    <div class="patient-panel patient-panel-info">
-        <div class="patient-panel-header">
-            <p>Patient Information</p>
-        </div>
-        <div class="patient-panel-body">
-            <img class="patient-panel-body--image" alt="patientIconLarge" src="{{patient.imageUrl}}">
-            <div class="patient-panel-detail" *ngIf="!isEditMode">
-                <div class="patient-panel-name">
-                    <p>{{patient.lastName}},</p>
-                    <p>{{patient.firstName}}</p>
-                </div>
-                <p class="patient-panel-sectionheader">Patient Address</p>
-                <div class="patient-panel-textdata">
-                    <p>{{patient.addressLine1}}</p>
-                    <p>{{patient.city}}, {{patient.state}} {{patient.zip}}</p>
-                </div>
-
-                <p class="patient-panel-sectionheader">Patient Contact Information</p>
-                <div class="patient-panel-textdata">
-                    <p>{{patient.phone}}</p>
-                    <p>{{patient.email}}</p>
-                </div>
+    <panel title="Patient Information" class="panel-info">
+        <img class="panel-body--image" alt="patientIconLarge" src="{{patient.imageUrl}}">
+        <div class="panel-detail" *ngIf="!isEditMode">
+            <div class="panel-name">
+                <p>{{patient.lastName}},</p>
+                <p>{{patient.firstName}}</p>
             </div>
-            <div *ngIf="isEditMode" class="patient-panel-detail">
-                <div class="patient-panel-name">
-                    <input class="input--block" [(ngModel)]="patient.lastName">
-                    <input [(ngModel)]="patient.firstName" >
-                </div>
-                <p class="patient-panel-sectionheader">Patient Address</p>
-                <div class="patient-panel-textdata">
-                    <input class="input--block" [(ngModel)]="patient.addressLine1">
-                    <input [(ngModel)]="patient.city" style="width:150px">, <input style="width:50px" [(ngModel)]="patient.state"> <input style="width:75px" [(ngModel)]="patient.zip">
-                </div>
-
-                <p class="patient-panel-sectionheader">Patient Contact Information</p>
-                <div class="patient-panel-textdata">
-                    <input class="input--block" [(ngModel)]="patient.phone">
-                    <input [(ngModel)]="patient.email">
-                </div>
+            <p class="panel-sectionheader">Patient Address</p>
+            <div class="panel-textdata">
+                <p>{{patient.addressLine1}}</p>
+                <p>{{patient.city}}, {{patient.state}} {{patient.zip}}</p>
             </div>
-            <button *ngIf="!isEditMode" (click)="editPatient()" class="patient-panel-button">EDIT</button>
-            <button *ngIf="isEditMode" (click)="savePatient()" class="patient-panel-button patient-panel-button--save">SAVE</button>
-        </div>
-    </div>
 
-    <div class="patient-panel patient-panel-physician">
-        <div class="patient-panel-header">
-            <p>Physician Information</p>
-        </div>
-        <div class="patient-panel-body">
-            <img class="patient-panel-body--image" src="{{physician.imageUrl}}">
-            <div class="patient-panel-detail">
-                <div class="patient-panel-name">
-                    <p>{{physician.lastName}},</p>
-                    <p>{{physician.firstName}}</p>
-                </div>
-                <p class="patient-panel-sectionheader">Physician Address</p>
-                <div class="patient-panel-textdata">
-                    <p>{{physician.addressLine1}}</p>
-                    <p>{{physician.city}}, {{physician.state}} {{physician.zip}}</p>
-                </div>
-                <p class="patient-panel-sectionheader">Physician Contact Information</p>
-                <div class="patient-panel-textdata">
-                    <p>{{physician.phone}}</p>
-                    <p>{{physician.email}}<br></p>
-                </div>
+            <p class="panel-sectionheader">Patient Contact Information</p>
+            <div class="panel-textdata">
+                <p>{{patient.phone}}</p>
+                <p>{{patient.email}}</p>
             </div>
         </div>
-    </div>
+        <div *ngIf="isEditMode" class="panel-detail">
+            <div class="panel-name">
+                <input class="input--block" [(ngModel)]="patient.lastName">
+                <input [(ngModel)]="patient.firstName" >
+            </div>
+            <p class="panel-sectionheader">Patient Address</p>
+            <div class="panel-textdata">
+                <input class="input--block" [(ngModel)]="patient.addressLine1">
+                <input [(ngModel)]="patient.city" style="width:150px">, <input style="width:50px" [(ngModel)]="patient.state"> <input style="width:75px" [(ngModel)]="patient.zip">
+            </div>
 
-    <div class="patient-panel">
-        <div class="patient-panel-header">
-            <p>Prescriptions List</p>
+            <p class="panel-sectionheader">Patient Contact Information</p>
+            <div class="panel-textdata">
+                <input class="input--block" [(ngModel)]="patient.phone">
+                <input [(ngModel)]="patient.email">
+            </div>
         </div>
-        <div class="patient-panel-body">
-            <table class="patient-data-table">
-                <tr class="patient-data-header">
-                    <th class="script-name textheader" >Name</th>
-                    <th class="script-dosage textheader">Dosage</th>
-                    <th class="script-refill textheader">Refill (Y/N)</th>
-                </tr>
-                <tr class="patient-data-body" *ngFor="let prescription of prescriptions">
-                    <td class="script-name textheader">{{prescription.name}}</td>
-                    <td class="script-dosage textheader">{{prescription.dosage}}</td>
-                    <td class="script-refill textheader">{{prescription.refill}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+        <button *ngIf="!isEditMode" (click)="editPatient()" class="panel-button">EDIT</button>
+        <button *ngIf="isEditMode" (click)="savePatient()" class="panel-button panel-button--save">SAVE</button>
+    </panel>
 
-    <div class="patient-panel">
-        <div class="patient-panel-header">
-            <p>Doctor Visits List</p>
+    <panel title="Physician Information" class="panel-physician">
+        <img class="panel-body--image" src="{{physician.imageUrl}}">
+        <div class="panel-detail">
+            <div class="panel-name">
+                <p>{{physician.lastName}},</p>
+                <p>{{physician.firstName}}</p>
+            </div>
+            <p class="panel-sectionheader">Physician Address</p>
+            <div class="panel-textdata">
+                <p>{{physician.addressLine1}}</p>
+                <p>{{physician.city}}, {{physician.state}} {{physician.zip}}</p>
+            </div>
+            <p class="panel-sectionheader">Physician Contact Information</p>
+            <div class="panel-textdata">
+                <p>{{physician.phone}}</p>
+                <p>{{physician.email}}<br></p>
+            </div>
         </div>
-        <div class="patient-panel-body">
-            <table class="patient-data-table">
-                <tr class="patient-data-header">
-                    <th class="visit-date textheader">Date</th>
-                    <th class="visit-name textheader">Physician Name</th>
-                </tr>
-                <tr class="patient-data-body" *ngFor="let visit of visits">
-                    <td class="visit-date textheader">{{visit.date}}</td>
-                    <td class="visit-name textheader">{{visit.doctor}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+    </panel>
 
-    <div class="patient-panel">
-        <div class="patient-panel-header">
-            <p>Invoices</p>
-        </div>
-        <div class="patient-panel-body">
-            <table class="patient-data-table">
-                <tr class="patient-data-header">
-                    <th class="invoice-due-date textheader">Due Date</th>
-                    <th class="invoice-amount textheader">Amount (USD)</th>
-                </tr>
-                <tr class="patient-data-body" *ngFor="let invoice of invoices">
-                    <td class="invoice-due-date textheader">{{invoice.dueDate}}</td>
-                    <td class="invoice-amount textheader">{{invoice.amount}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+    <panel title="Prescriptions List">
+        <table class="data-table">
+            <tr class="data-header">
+                <th class="script-name textheader" >Name</th>
+                <th class="script-dosage textheader">Dosage</th>
+                <th class="script-refill textheader">Refill (Y/N)</th>
+            </tr>
+            <tr class="data-body" *ngFor="let prescription of prescriptions">
+                <td class="script-name textheader">{{prescription.name}}</td>
+                <td class="script-dosage textheader">{{prescription.dosage}}</td>
+                <td class="script-refill textheader">{{prescription.refill}}</td>
+            </tr>
+        </table>
+    </panel>
 
-    <div class="patient-panel">
-        <div class="patient-panel-header">
-            <p>Lab Results</p>
-        </div>
-        <div class="patient-panel-body">
-            <table class="patient-data-table">
-                <tr class="patient-data-header">
-                    <th class="lab-test textheader">Tests</th>
-                    <th class="lab-result textheader">Results</th>
-                    <th class="lab-level textheader">Level</th>
-                </tr>
-                <tr class="patient-data-body" *ngFor="let lab of labResults">
-                    <td class="lab-test textheader">{{lab.test}}</td>
-                    <td class="lab-result textheader">{{lab.result}}</td>
-                    <td class="lab-level textheader">{{lab.level}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+    <panel title="Prescriptions List">
+        <table class="data-table">
+            <tr class="data-header">
+                <th class="visit-date textheader">Date</th>
+                <th class="visit-name textheader">Physician Name</th>
+            </tr>
+            <tr class="data-body" *ngFor="let visit of visits">
+                <td class="visit-date textheader">{{visit.date}}</td>
+                <td class="visit-name textheader">{{visit.doctor}}</td>
+            </tr>
+        </table>
+    </panel>
 
+    <panel title="Invoices">
+        <table class="data-table">
+            <tr class="data-header">
+                <th class="invoice-due-date textheader">Due Date</th>
+                <th class="invoice-amount textheader">Amount (USD)</th>
+            </tr>
+            <tr class="data-body" *ngFor="let invoice of invoices">
+                <td class="invoice-due-date textheader">{{invoice.dueDate}}</td>
+                <td class="invoice-amount textheader">{{invoice.amount}}</td>
+            </tr>
+        </table>
+    </panel>
+
+    <panel title="Lab Results">
+        <table class="data-table">
+            <tr class="data-header">
+                <th class="lab-test textheader">Tests</th>
+                <th class="lab-result textheader">Results</th>
+                <th class="lab-level textheader">Level</th>
+            </tr>
+            <tr class="data-body" *ngFor="let lab of labResults">
+                <td class="lab-test textheader">{{lab.test}}</td>
+                <td class="lab-result textheader">{{lab.result}}</td>
+                <td class="lab-level textheader">{{lab.level}}</td>
+            </tr>
+        </table>
+    </panel>
 </div>

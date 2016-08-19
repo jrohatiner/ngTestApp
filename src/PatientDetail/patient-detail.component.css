@@ -1,80 +1,59 @@
-.patient-panel {
-    font: 400 16px/1.38 Roboto;
-    margin-top:20px;
-    margin-left: 30px;
-    width: 660px;
-    border: 1px solid rgb(195, 195, 195);
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-}
-.patient-panel-info {
+.panel-info {
     height: 416px;
 }
-.patient-panel-physician {
+.panel-physician {
     height: 416px;
 }
 
-.patient-panel-header {
-    height: 28px;
-    background-color: rgb(0, 127, 163);
-    padding: 4px 0 0 10px;
-    color: rgb(255, 255, 255);
-}
-
-.patient-panel-body {
-    padding: 36px 20px 0 9px;
-    margin-bottom: 30px;
-}
-
-.patient-panel-body--image {
+.panel-body--image {
     float: left;
     width: 224px;
 }
 
-.patient-panel-detail {
+.panel-detail {
     padding: 2px 0 0 21px;
     display: inline-block;
     white-space: nowrap;
 }
 
-.patient-panel-name {
+.panel-name {
     font-size: 1.75em;
     font-weight: 700;
     line-height: 0.75;
 }
 
-.patient-panel-name p {
+.panel-name p {
     margin-bottom: 1em;
 }
 
-.patient-panel-name input {
+.panel-name input {
     margin-bottom: calc(1em - 9px);
     margin-top: -9px;
     margin-left: -1px;
     border: 1px solid rgb(222,222,222);
 }
 
-.patient-panel-sectionheader {
+.panel-sectionheader {
     color: rgb(98, 98, 98);
 }
 
-.patient-panel-textdata {
+.panel-textdata {
     font-size: 1.125em;
     line-height: 1.33;
     margin-top: 6px;
 }
 
-.patient-panel-textdata p {
+.panel-textdata p {
     margin-bottom: 1em;
 }
-.patient-panel-textdata input {
+.panel-textdata input {
     margin-bottom: calc(1em - 1px);
     margin-top: -2px;
     margin-left: -1px;
     border: 1px solid rgb(222,222,222);
 }
 
-.patient-panel-button {
+.panel-button {
     display: block;
     float: right;
     margin-top: 310px;
@@ -87,28 +66,28 @@
     color: rgb(255, 153, 0);
 }
 
-.patient-panel-button--save {
+.panel-button--save {
     margin-top: -8px;
 }
 
-.patient-panel-button:hover {
+.panel-button:hover {
     background-color: rgb(255, 153, 0);
     color: rgb(255, 255, 255);
 }
 
-.patient-panel-button:focus {
+.panel-button:focus {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 1px rgba(255, 153, 0, 0.5) inset;
 }
 
-.patient-data-table {
+.data-table {
     width: 100%;
 }
-.patient-data-header th {
+.data-header th {
     padding: 10px 0;
     border-bottom: 1px solid rgb(222,222,222);
 }
-.patient-data-body td {
+.data-body td {
     padding: 6px 0;
 }
 .script-name {
