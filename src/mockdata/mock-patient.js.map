@@ -1,1 +1,0 @@
-{"version":3,"file":"mock-patient.js","sourceRoot":"","sources":["mock-patient.ts"],"names":[],"mappings":";AAAa,eAAO,GAChB;IACI,WAAW,EAAE,MAAM;IACnB,UAAU,EAAE,KAAK;IACjB,UAAU,EAAE,uBAAuB;IACnC,cAAc,EAAE,eAAe;IAC/B,MAAM,EAAE,YAAY;IACpB,OAAO,EAAE,IAAI;IACb,KAAK,EAAE,OAAO;IACd,OAAO,EAAE,gBAAgB;IACzB,OAAO,EAAE,eAAe;CAC3B,CAAC"}
