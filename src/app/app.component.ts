@@ -7,7 +7,7 @@ import '../../styles/index.css';
 @Component({
     selector: 'lcp-app',
     template: require('./app.component.html'),
-    styleUrls: ['/app.component.css']
+    styles: [require('./app.component.css')]
 })
 export class AppComponent {
     public canGoBack = false;
@@ -23,6 +23,7 @@ export class AppComponent {
                     let url = event.url.substring(0,1) === "/" ? event.url.substring(1) : event.url;
                     this.canGoBack = !(url === "" || url === "patients");
                 }
+
             });
     }
 

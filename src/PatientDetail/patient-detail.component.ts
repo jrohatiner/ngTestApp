@@ -5,7 +5,7 @@ import { PatientService }           from '../services/patient.service';
 @Component({
     selector: 'patient-detail',
     template: require('./patient-detail.component.html'),
-    styleUrls: ['./patient-detail.component.css']
+    styles: [require('./patient-detail.component.css')]
 })
 export class PatientDetailComponent implements OnInit {
     patient;
