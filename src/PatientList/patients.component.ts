@@ -9,7 +9,7 @@ import { PatientService }       from '../services/patient.service';
 
 })
 export class PatientsComponent implements OnInit {
-    patients;
+    patients:any;
 
     constructor(private router: Router, private patientService: PatientService) {}
 
@@ -24,7 +24,7 @@ export class PatientsComponent implements OnInit {
             );
     }
 
-    gotoPatientDetail(patient) {
+    gotoPatientDetail(patient:any) {
         this.router.navigate(['/patient', 1]);
     }
 

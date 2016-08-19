@@ -9,34 +9,35 @@ import { LAB_RESULTS }      from '../mockdata/mock-labResults';
 
 @Injectable()
 export class PatientService {
+
     getPatients() {
-        let patients = PATIENTS.map((patient) => {
+        let patients:any = PATIENTS.map((patient) => {
             return patient.patient;
         });
         return Promise.resolve(patients);
     }
 
-    getPatient(id) {
+    getPatient(id:any) {
         return Promise.resolve(PATIENT);
     }
 
-    getPatientPhysician(id) {
+    getPatientPhysician(id:any) {
         return Promise.resolve(PHYSICIAN);
     }
 
-    getPatientPrescriptions(id) {
+    getPatientPrescriptions(id:any) {
         return Promise.resolve(PRESCRIPTIONS);
     }
 
-    getPatientVisits(id) {
+    getPatientVisits(id:any) {
         return Promise.resolve(VISITS);
     }
 
-    getPatientInvoices(id) {
+    getPatientInvoices(id:any) {
         return Promise.resolve(INVOICES);
     }
 
-    getPatientLabResults(id) {
+    getPatientLabResults(id:any) {
         return Promise.resolve(LAB_RESULTS);
     }
 }

@@ -9,13 +9,13 @@ import { PanelComponent }           from '../layout/panel.component';
     styles: [require('!!raw!less!./patient-detail.component.css')]
 })
 export class PatientDetailComponent implements OnInit {
-    patient;
-    physician;
-    prescriptions = [];
-    visits = [];
-    invoices = [];
-    labResults = [];
-    isEditMode = false;
+    patient:any;
+    physician:any;
+    prescriptions:Array<any> = [];
+    visits:Array<any> = [];
+    invoices:Array<any> = [];
+    labResults:Array<any> = [];
+    isEditMode:boolean = false;
 
     constructor(private patientService: PatientService, private route: ActivatedRoute) {}
 

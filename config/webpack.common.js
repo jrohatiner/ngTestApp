@@ -32,9 +32,9 @@ module.exports = {
             {
                 test: /^(?!.*\.min\.css$).*\.css$/,
                 // include: helpers.root('src', 'app'),
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap")
+                // loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap")
                 //this is the change for webpack 2.0.0-beta20
-                // loader: ExtractTextPlugin.extract({fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap'})
+                loader: ExtractTextPlugin.extract({fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap'})
             },
             {
                 test: /\.less$/,
